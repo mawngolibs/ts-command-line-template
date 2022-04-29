@@ -1,5 +1,6 @@
 const path = require("path");
 const meta = require("./package.json");
+const webpack = require("webpack");
 
 module.exports = {
   entry: "./src/index.ts",
@@ -21,5 +22,18 @@ module.exports = {
   },
   output: {
     filename: `${meta.name}.bundle.js`
-  }
+  },
+  plugins: [
+    new webpack.EnvironmentPlugin({
+      BUILD_DATE: new Date().toISOString(),
+      META: {
+        name: meta.name,
+        description: meta.description,
+        version: meta.version,
+        author: meta.author,
+        license: meta.license,
+        homepage: meta.homepage
+      }
+    })
+  ]
 };
