@@ -1,4 +1,5 @@
 const path = require("path");
+const ESLintPlugin = require("eslint-webpack-plugin");
 const meta = require("./package.json");
 const webpack = require("webpack");
 
@@ -25,8 +26,7 @@ module.exports = {
   },
   plugins: [
     new webpack.EnvironmentPlugin({
-      BUILD_DATE: new Date().toISOString(),
-      META: {
+      BUILD_DATE: new Date().toISOString(), META: {
         name: meta.name,
         description: meta.description,
         version: meta.version,
@@ -34,6 +34,7 @@ module.exports = {
         license: meta.license,
         homepage: meta.homepage
       }
-    })
+    }),
+    new ESLintPlugin({ extensions: ["tsx", "ts", "js"] })
   ]
 };
