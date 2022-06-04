@@ -14,19 +14,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sitdownrightnow2552/ts-command-line-template.git"
+    "url": "git+https://github.com/lana-collections/ts-command-line-template.git"
   },
   "keywords": [
     "command-line",
     "terminal",
+    "cli",
+    "typescript",
     "template"
   ],
   "author": "Lana",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sitdownrightnow2552/ts-command-line-template/issues"
+    "url": "https://github.com/lana-collections/ts-command-line-template/issues"
   },
-  "homepage": "https://github.com/sitdownrightnow2552/ts-command-line-template#readme",
+  "homepage": "https://github.com/lana-collections/ts-command-line-template#readme",
   "devDependencies": {
     "@types/node": "^16.10.2",
     "@types/yargs": "^17.0.3",
