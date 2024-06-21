@@ -2,6 +2,8 @@
 
 Template for building command line tool with yargs and typescript
 
+## Development
+
 ### Run project
 
 First run the webpack watcher
@@ -14,4 +16,10 @@ Then run the tool with
 
 ```shell
 npm start -- --help
+```
+
+### Build project
+
+```shell
+npm build
 ```
